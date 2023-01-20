@@ -13,3 +13,17 @@ campo.on("input", () => {
     var qtdCaracteres = conteudo.length;
     $('#contador-caracteres').text(qtdCaracteres)
 });
+
+var tempoRestante = $('#tempo-digitacao').text();
+campo.one('focus', () => {
+    var cronometroId =  setInterval(() => {
+        tempoRestante--;
+        $('#tempo-digitacao').text(tempoRestante);
+        console.log(tempoRestante);
+
+        if(tempoRestante < 1) {
+            campo.attr('disabled', true);
+            clearInterval(cronometroId);
+        }
+    }, 1000)
+})
