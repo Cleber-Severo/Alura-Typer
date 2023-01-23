@@ -8,7 +8,7 @@ $(() => {
     atualizaTamanhoFrase();
     inicializaCronometro();
     inicializaContadores();
-    reiniciarBtn.click(reinicia)
+    reiniciarBtn.click(reiniciaJogo)
 })
 
 
@@ -52,7 +52,7 @@ function inicializaCronometro() {
                 campo.attr('disabled', true);
                 reiniciarBtn.attr('disabled', false);
                 clearInterval(cronometroId);
-                campo.addClass('campo-desativado')
+                campo.toggleClass('campo-desativado')
             }
         }, 1000)
     })
@@ -60,12 +60,13 @@ function inicializaCronometro() {
 }
 
 
-function reinicia() {
+function reiniciaJogo() {
     campo.attr('disabled', false);
     campo.val('');
     $('#contador-palavras').text(0);
     $('#contador-caracteres').text(0);
     $('#tempo-digitacao').text(tempoInicial);
     inicializaCronometro();
+    campo.toggleClass('campo-desativado')
 }
 
