@@ -67,7 +67,7 @@ function inicializaMarcadores() {
         var digitado = campo.val();
         var comparavel = fraseComparavel.substr(0,digitado.length);
         
-        if (digitado == comparavel) {
+        if (fraseComparavel.startsWith(digitado)) {
             campo.addClass('borda-verde');
             campo.removeClass('borda-vermelha');
         } else {
