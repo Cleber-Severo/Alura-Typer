@@ -52,6 +52,7 @@ function inicializaCronometro() {
                 campo.attr('disabled', true);
                 reiniciarBtn.attr('disabled', false);
                 clearInterval(cronometroId);
+                campo.addClass('campo-desativado')
             }
         }, 1000)
     })
