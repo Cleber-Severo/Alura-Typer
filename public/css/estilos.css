@@ -22,3 +22,7 @@
 .borda-vermelha {
     border-color: red ;
 }
+
+.frase {
+    text-align: left;
+}

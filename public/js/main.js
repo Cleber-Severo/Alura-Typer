@@ -88,14 +88,22 @@ function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Cléber";
     var numPalavras = $("#contador-palavras").text();
+    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
 
      var linha = "<tr>"+
                     "<td>"+ usuario + "</td>"+
                     "<td>"+ numPalavras + "</td>"+
+                    "<td>"+ botaoRemover + "</td>"+
                 "</tr>";
 
     corpoTabela.prepend(linha);
+
 }
+
+$('.botao-remover').click(function(e) {
+    e.preventDefault();
+    $(this).parent().parent().remove();
+})
 
 function reiniciaJogo() {
     campo.attr('disabled', false);

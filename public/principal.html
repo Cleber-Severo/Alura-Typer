@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
@@ -8,11 +9,14 @@
     <link rel="stylesheet" href="./css/libs/google-fonts.css">
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
+
 <body>
 
     <div class="container">
         <h1 class="center">Alura Typer</h1>
-        <p class="frase center">Esta frase tem diversas boas palavras incriveis</p>
+        <p class="frase center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptatibus nam
+            adipisci quos optio officiis atque molestias voluptas dolorum eaque explicabo facere repudiandae, sint,
+            deserunt totam quibusdam? Enim, quidem quia.</p>
         <ul class="informacoes center">
             <li>
                 <i class="small material-icons icones">description</i>
@@ -23,15 +27,15 @@
                 <span id="tempo-digitacao">3</span> Segundos
             </li>
         </ul>
-    
+
         <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
         <div class="botoes">
             <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar">
                 <i class="material-icons">restore</i>
             </a>
         </div>
-                
-    
+
+
         <ul class="center">
             <li><span id="contador-caracteres">0</span> caracteres</li>
             <li><span id="contador-palavras">0</span> palavras</li>
@@ -43,19 +47,15 @@
                 <thead>
                     <th>Usuário</th>
                     <th>No° de palavras</th>
+                    <th>Remover</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Douglas</th>
+                        <td>Douglas</td>
                         <td>10</td>
-                    </tr>
-                    <tr>
-                        <th>Douglas</th>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <th>Douglas</th>
-                        <td>10</td>
+                        <td>
+                            <a href="#" class="botao-remover"><i class="small material-icons">delete</i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -65,4 +65,5 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
